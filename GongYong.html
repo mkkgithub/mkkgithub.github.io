@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LiaoJieXinJia</title>
+    <link rel="stylesheet" href="../Jquery/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--    <link rel="stylesheet" href="../css/GongYong.css">-->
+    <style>
+        /*初始化*/
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /*初始化*/
+        /*最外层盒子*/
+        .box{
+            width:100%;
+            height:50px;
+            background-color: #313131;
+        }
+        /*最外层盒子*/
+        /*内容部分*/
+        .head{
+            display: flex;
+            width:1296px;
+            margin: 0 auto;
+        }
+        /*logo*/
+        .logo::after {
+            background-image: url("http://img.zaozuo.com/0d5cff465aa25cb7ca1e54fd8b1ba285");
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            content: "";
+            background-size:cover;
+            margin-left: 60px;
+            margin-top: 15px;
+        }
+        /*logo*/
+        /*导航栏部分*/
+        .top-nav{
+            position: relative;
+        }
+        .top-nav ul li:nth-child(1){
+            margin-left: 20px;
+        }
+        .top-nav ul li{
+            height: 45px;
+            list-style: none;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .top-right{
+            text-indent: 10px;
+        }
+        .top-nav ul li a {
+            text-decoration: none;
+            font-size: 13px;
+            color: #fff;
+            line-height: 50px;
+        }
+        .top-nav ul li:hover {
+            border-bottom: 1px solid #fff;
+        }
+        /*login部分*/
+        .top-nav1{
+            position: absolute;
+            top: -1px;
+            right:-100px;
+        }
+        .top-nav1 li{
+            border: none !important;
+        }
+        .login{
+            position: relative;
+            padding: 0 15px;
+        }
+        .login a  img{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin: 14px auto;
+            position: absolute;
+        }
+        .login a img:nth-child(2){
+            opacity: 0;
+        }
+        .login a:hover img:nth-child(2){
+            opacity: 1;
+        }
+        /*login部分*/
+        /*导航栏部分*/
+        /*内容部分*/
+        /*导航栏部分*/
+        .top-nav{
+            position: relative;
+        }
+        .top-nav ul li:nth-child(1){
+            margin-left: 20px;
+        }
+        .top-nav ul li{
+            height: 45px;
+            list-style: none;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .top-right{
+            text-indent: 10px;
+        }
+        .top-nav ul li a {
+            text-decoration: none;
+            font-size: 13px;
+            color: #fff;
+            line-height: 50px;
+            font-weight: 400;
+        }
+        .top-nav ul li:hover {
+            border-bottom: 1px solid #fff;
+        }
+        /*login部分*/
+        .top-nav1{
+            position: absolute;
+            top: -1px;
+            right:-100px;
+        }
+        .top-nav1 li{
+            border: none !important;
+        }
+        .login{
+            position: relative;
+            padding: 0 15px;
+        }
+        .login a  img{
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin: 14px auto;
+            position: absolute;
+        }
+        .login a img:nth-child(2){
+            opacity: 0;
+        }
+        .login a:hover img:nth-child(2){
+            opacity: 1;
+        }
+        /*login部分*/
+        /*导航栏部分*/
+        .nav-down{
+            position:absolute;
+            height:0;
+            top: 50px;
+            width:1296px;
+            background: rgba(49,49,49,.95);
+            left: -85px;
+            opacity: 0;
+            transition: all .2s cubic-bezier(0,0,.75,.47);
+            overflow: hidden;
+        }
+        .nav-down .nav-font {
+            text-align: center;
+        }
+        .nav-font{
+            overflow: hidden;
+            transition: all .1s initial;
+        }
+        .nav-font a{
+            font-size: 12px !important;
+            padding: 0 20px;
+            color: #d2d2d2 !important;
+            font-weight: 400!important;
+        }
+        .nav-font a:hover{
+            color: #fff!important;
+        }
+        .nav:hover .nav-down{
+            opacity: 1;
+            height: 50px;
+        }
+        /*内容部分*/
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <!--顶部导航栏部分-->
+    <div class="head">
+        <div class="logo"></div>
+        <div class="top-nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li class="nav">
+                    <a href="#">全屋系列</a>
+                    <div class="nav-down">
+                        <p class="nav-font">
+                            <a href="">全部</a>
+                            <a href="">美术馆系列</a>
+                            <a href="">画板系列</a>
+                            <a href="">山雪系列</a>
+                            <a href="">青山系列</a>
+                            <a href="">cosmo系列</a>
+                            <a href="">朱雀系列</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="nav">
+                    <a href="#">沙发 · 板凳</a>
+                    <div class="nav-down">
+                        <p class="nav-font">
+                            <a href="">全部</a>
+                            <a href="">沙发</a>
+                            <a href="">休闲椅</a>
+                            <a href="">板凳</a>
+                            <a href="">坐墩</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="nav">
+                    <a href="#">柜架</a>
+                    <div class="nav-down">
+                        <p class="nav-font">
+                            <a href="">全部</a>
+                            <a href="">电视柜</a>
+                            <a href="">书柜-书架</a>
+                            <a href="">衣柜</a>
+                            <a href="">餐边柜</a>
+                            <a href="">斗柜</a>
+                            <a href="">鞋柜</a>
+                            <a href="">玄关柜</a>
+                            <a href="">床头柜</a>
+                            <a href="">推车</a>
+                            <a href="">置物架-储物格</a>
+                            <a href="">衣帽架</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="nav">
+                    <a href="#">床 · 床具</a>
+                    <div class="nav-down">
+                        <p class="nav-font">
+                            <a href="">全部</a>
+                            <a href="">床</a>
+                            <a href="">床垫</a>
+                            <a href="">床头柜</a>
+                            <a href="">床品</a>
+                            <a href="">被褥</a>
+                            <a href="">枕芯</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="nav">
+                    <a href="#">桌几</a>
+                    <div class="nav-down">
+                        <p class="nav-font">
+                            <a href="">全部</a>
+                            <a href="">餐桌-书桌</a>
+                            <a href="">茶几</a>
+                            <a href="">边桌</a>
+                            <a href="">梳妆台</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="nav">
+                    <a href="#">灯具</a>
+                    <div class="nav-down">
+                        <p class="nav-font">
+                            <a href="">全部</a>
+                            <a href="">地灯</a>
+                            <a href="">吊灯</a>
+                            <a href="">台灯</a>
+                            <a href="">吸顶灯</a>
+                            <a href="">夜灯</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="nav">
+                    <a href="#">家纺 · 床品</a>
+                    <div class="nav-down">
+                        <p class="nav-font">
+                            <a href="">全部</a>
+                            <a href="">床品</a>
+                            <a href="">被褥</a>
+                            <a href="">枕芯</a>
+                            <a href="">毛巾-浴巾</a>
+                            <a href="">盖毯</a>
+                            <a href="">地毯-地垫</a>
+                            <a href="">抱枕-劲枕</a>
+                            <a href="">围巾</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="nav">
+                    <a href="#">装饰 · 收纳</a>
+                    <div class="nav-down">
+                        <p class="nav-font">
+                            <a href="">全部</a>
+                            <a href="">墙镜</a>
+                            <a href="">花瓶</a>
+                            <a href="">摆件</a>
+                            <a href="">收纳</a>
+                            <a href="">装饰画</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="nav">
+                    <a href="#">餐具 · 水具</a>
+                    <div class="nav-down">
+                        <p class="nav-font">
+                            <a href="">全部</a>
+                            <a href="">餐具</a>
+                            <a href="">杯子</a>
+                            <a href="">托盘-果盘</a>
+                            <a href="">食品储物</a>
+                        </p>
+                    </div>
+                </li>
+
+                <li class="top-right">
+                    <i class="fa fa-map-marker" style="font-size: 16px;color:#fff;"></i>
+                </li>
+                <li class="top-right1"><a href="#">实体店</a></li>
+                <li><a href="#">了解造作新家</a></li>
+                <li><a href="#">商业合作</a></li>
+            </ul>
+                <ul class="top-nav1">
+                    <li>
+                        <div class="login">
+                            <a href="">
+                                <img src="http://img.zaozuo.com/8576f41b91454a9dcfe10117c7866da9" alt="">
+                                <img src="http://img.zaozuo.com/3eafa8a3062fd17672ae1bc4f605e679" alt="">
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="login">
+                            <a href="">
+                                <img src="https://img.zaozuo.com/737626452b898ffba27f9ad288c80c09" alt="">
+                                <img src="https://img.zaozuo.com/10de03eec28b15b7b71d2e583f160d61" alt="">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
