@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .content{
+            margin: 300px auto;
+            width: 100px;
+            height: 100px;
+            background-image: url(ball.png);
+            animation: ball 2s  infinite ;
+        }
+        @keyframes ball {
+            0%{
+                background-image: url("ball.png");
+                background-size: contain;
+            }
+            15%{
+                transform:  translateY(-100px) rotate(180deg);
+            }
+            35%{
+                transform: translateY(0);
+                background-image: url("ball.png");
+                background-size: contain;
+            }
+            36%{
+                background-image: url("zfx.png");
+                background-size: contain;
+            }
+            55%{
+                background-image: url("zfx.png");
+                background-size: contain;
+                transform: translateY(-100px) rotate(180deg);
+            }
+
+            75%{
+                background-image: url("sjx.png");
+                background-size: contain;
+                transform: rotate(120deg);
+            }
+            90%{
+                background-image: url("sjx.png");
+                background-size: contain;
+                transform: translateY(-100px);
+            }
+            100%{
+                background-image: url("ball.png");
+                background-size: contain;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="content"></div>
+</div>
+</body>
+</html>
